@@ -33,8 +33,8 @@ public class Curso {
 	public void matricula( Aluno aluno ) {
 		this.alunos.add( aluno );
 	}
-	
-	public Set<Aluno> getAlunos(){
+
+	public Set<Aluno> getAlunos() {
 		return Collections.unmodifiableSet( alunos );
 	}
 
@@ -42,4 +42,20 @@ public class Curso {
 		// TODO Auto-generated method stub
 
 	}
+
+	public boolean estaMatriculado( Aluno aluno ) {
+		return this.alunos.contains( aluno );
+	}
+
+	@Override
+	public int hashCode() {
+		return this.nome.hashCode();
+	}
+
+	@Override
+	public boolean equals( Object obj ) {
+		Aluno outroAluno = (Aluno) obj;
+		return this.nome.equals( outroAluno.getNome() );
+	}
+
 }
