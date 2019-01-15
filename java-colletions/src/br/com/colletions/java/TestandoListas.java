@@ -3,18 +3,18 @@ package br.com.colletions.java;
 import java.util.ArrayList;
 import java.util.Comparator;
 
-import br.com.colletions.java.model.Aulas;
+import br.com.colletions.java.model.Aula;
 
 public class TestandoListas {
 
 	public static void main(String[] args) {
 
 		
-		Aulas a1 = new Aulas("Java", 20);
-		Aulas a2 = new Aulas("Javascript", 30);
-		Aulas a3 = new Aulas("Angular", 40);
+		Aula a1 = new Aula( "Java", 20 );
+		Aula a2 = new Aula( "Javascript", 30 );
+		Aula a3 = new Aula( "Angular", 40 );
 		
-		ArrayList<Aulas> cursos = new ArrayList<>();
+		ArrayList<Aula> cursos = new ArrayList<>();
 		
 		cursos.add(a1);
 		cursos.add(a2);
@@ -33,8 +33,8 @@ public class TestandoListas {
 //		System.out.println(cursos.get(0));
 		
 		
-		//ordenação utilizando lambda
-		cursos.sort(Comparator.comparing(Aulas::getTempo));
+		//ordenaï¿½ï¿½o utilizando lambda
+		cursos.sort( Comparator.comparing( Aula::getTempo ) );
 		
 	}
 

@@ -1,11 +1,11 @@
 package br.com.colletions.java.model;
 
-public class Aulas implements Comparable<Aulas>{
+public class Aula implements Comparable<Aula>{
 
 	private String curso;
 	private int tempo;
 
-	public Aulas(String curso, int tempo) {
+	public Aula(String curso, int tempo) {
 		this.curso = curso;
 		this.tempo = tempo;
 	}
@@ -25,7 +25,7 @@ public class Aulas implements Comparable<Aulas>{
 
 	//implementando o metodo de comparable
 	@Override
-	public int compareTo(Aulas outraAula) {
+	public int compareTo(Aula outraAula) {
 		return this.curso.compareTo(outraAula.getCurso());
 	}
 
